@@ -5,7 +5,7 @@ import 'package:news_test_app/constants/strings/home_screen/home_screen.dart';
 import 'package:news_test_app/home/other_page/view.dart';
 import 'package:news_test_app/home/widgets/bottom_nav_bar.dart';
 import 'package:news_test_app/home/widgets/floating_button.dart';
-import 'package:news_test_app/managers/news_feed_manager.dart';
+import 'package:news_test_app/home/main_page/news_feed_provider_decorator.dart';
 
 import 'main_page/view.dart';
 
@@ -20,7 +20,7 @@ class _HomeScreenViewState extends State<HomeScreenView> {
 
   final pageController = PageController();
   final index = ValueNotifier(0);
-  final NewsProviderRepo newsFeedProvider = NewsFeedDecorator(NewsProvider());
+  final NewsProviderRepo newsFeedProvider = NewsFeedProviderDecorator(NewsProvider());
 
   @override
   Widget build(BuildContext context) {
